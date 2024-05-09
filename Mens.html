@@ -14,14 +14,14 @@
 <body>
     <!-- nav manu  -->
     <nav class="">
-        <div class="hidden md:flex justify-between mx-10 border-b-2 border-black-300">
-            <ul class="flex gap-8 items-center my-3">
+        <div class="justify-between hidden mx-10 border-b-2 md:flex border-black-300">
+            <ul class="flex items-center gap-8 my-3">
                 <li>About</li>
                 <li>Privacy</li>
                 <li>FAQ</li>
                 <li>Careers</li>
             </ul>
-            <ul class="flex gap-8 items-center my-3">
+            <ul class="flex items-center gap-8 my-3">
                 <li>My Wishlist</li>
                 <li>Track Your Order</li>
                 <i class="fa-brands fa-facebook"></i>
@@ -32,11 +32,11 @@
             </ul>
         </div>
 
-        <div class="flex mt-5 mx-5 md:mx-0 justify-between md:justify-evenly md:mt-2 items-center">
+        <div class="flex items-center justify-between mx-5 mt-5 md:mx-0 md:justify-evenly md:mt-2">
             <div class="">
                 <img src="./assets/images/logo.png.webp" class="mt-5 md:mt-0" alt="LOGO">
             </div>
-            <ul class="flex gap-8 items-center hidden md:flex">
+            <ul class="flex items-center hidden gap-8 md:flex">
                 <li class="font-bold"><a href="index.html">Home</a></li>
                 <li class="font-bold"><a href="Mens.html">Men</a></li>
                 <li class="font-bold"><a href="womens.html">Women</a></li>
@@ -44,7 +44,7 @@
                 <li class="font-bold"><a href="blog.html">Blog</a></li>
                 <li class="font-bold"><a href="contact.html">Contact</a></li>
             </ul>
-            <ul class="flex gap-4 items-center hidden md:flex">
+            <ul class="flex items-center hidden gap-4 md:flex">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <i class="fa-solid fa-user"></i>
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -61,7 +61,7 @@
     </nav>
 
     <!-- offer  -->
-    <section class="bg-black text-center py-3 mt-3">
+    <section class="py-3 mt-3 text-center bg-black">
         <div>
             <p class="text-white">Sale Up To 50% Biggest Discounts. Hurry! Limited Perriod Offer <a href="#"
                     class="underline">Shop Now</a></p>
@@ -71,9 +71,9 @@
     <!-- filter and products  -->
 
     <section>
-        <div class="flex">
-            <div class="w-2/6">
-                <div>
+        <div class="flex flex-wrap md:flex-nowrap">
+            <div class="hidden w-2/5 md:block">
+                <div class="w-4/5 m-auto my-5">
                     <select id="category"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option selected>Category</option>
@@ -83,7 +83,7 @@
                         <option value="DE">Category</option>
                     </select>
                 </div>
-                <div>
+                <div class="w-4/5 m-auto my-5">
                     <select id="type"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option selected>Type</option>
@@ -93,7 +93,7 @@
                         <option value="DE">Type</option>
                     </select>
                 </div>
-                <div>
+                <div class="w-4/5 m-auto my-5">
                     <select id="size"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option selected>Size</option>
@@ -103,7 +103,7 @@
                         <option value="DE">Size</option>
                     </select>
                 </div>
-                <div>
+                <div class="w-4/5 m-auto my-5">
                     <select id="color"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                         <option selected>color</option>
@@ -113,53 +113,78 @@
                         <option value="DE">color</option>
                     </select>
                 </div>
-                <div>
-                    <h2>Filter by price</h2>
+                <div class="w-3/12 m-auto my-5 ">
+                    <h2 class="mb-2 font-bold">Filter by price</h2>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                 </div>
-                <div class="">
-                    <h2>Filter by Geners</h2>
-                    <label for="history">History</label><input type="checkbox" name="history" id="">
-                    <label for="Horror">Horror</label><input type="checkbox" name="Horror" id="">
-                    <label for="Thriller">Thriller</label><input type="checkbox" name="Thriller" id="">
-                    <label for="Love stories">Love stories</label><input type="checkbox" name="Love stories" id="">
-                    <label for="Biography">Biography</label><input type="checkbox" name="Biography" id="">
+                <div class="flex flex-col w-3/12 m-auto">
+                    <h2 class="mb-2 font-bold">Filter by Geners</h2>
+                    <label for="history"><input type="checkbox" name="history" id="" > History</label>
+                    <label for="Horror"><input type="checkbox" name="Horror" id=""> Horror</label>
+                    <label for="Thriller"><input type="checkbox" name="Thriller" id=""> Thriller</label>
+                    <label for="Love stories"><input type="checkbox" name="Love stories" id=""> Love stories</label>
+                    <label for="Biography"><input type="checkbox" name="Biography" id=""> Biography</label>
                 </div>
-                <div>
-                    <h2>Filter by Brands</h2>
-                    <label for="Brand 1">Brand 1</label><input type="checkbox" name="Brand 1" id="">
-                    <label for="Brand 2">Brand 2</label><input type="checkbox" name="Brand 2" id="">
-                    <label for="Brand 3">Brand 3</label><input type="checkbox" name="Brand 3" id="">
-                    <label for="Brand 4">Brand 4</label><input type="checkbox" name="Brand 4" id="">
-                    <label for="Brand 5">Brand 5</label><input type="checkbox" name="Brand 5" id="">
+                <div class="flex flex-col w-3/12 m-auto my-5">
+                    <h2 class="mb-2 font-bold">Filter by Brands</h2>
+                    <label for="Brand 1"><input type="checkbox" name="Brand 1" id=""> Brand 1</label>
+                    <label for="Brand 2"><input type="checkbox" name="Brand 2" id=""> Brand 2</label>
+                    <label for="Brand 3"><input type="checkbox" name="Brand 3" id=""> Brand 3</label>
+                    <label for="Brand 4"><input type="checkbox" name="Brand 4" id=""> Brand 4</label>
+                    <label for="Brand 5"><input type="checkbox" name="Brand 5" id=""> Brand 5</label>
                 </div>
             </div>
 
-            <div class="mx-32 my-10 w-3/4">
-                <h1 class="font-medium text-3xl mb-4 text-center mb-5">You May Life</h1>
-                <div class="flex flex-wrap md:flex-nowrap justify-around text-center">
-                    <div class="mx-2 border border-black pb-3 mb-2">
+            <div class="w-3/5 mx-32 my-10">
+                <h1 class="mb-4 mb-5 text-3xl font-medium text-center">You May Life</h1>
+                <div class="grid justify-around grid-cols-1 text-center sm:grid-cols-2 md:grid-cols-4">
+                    <div class="pb-3 mx-2 mb-2 border border-black">
                         <img src="./assets/images/you1.webp" alt="">
                         <p class="mt-1">Cashmere and Bag</p>
-                        <p>$15 <span class="text-blue-800 font-bold line-through ml-2">$100</span></p>
-                        <button class="p-3 bg-black text-white mt-3">Add to cart</button>
+                        <p>$15 <span class="ml-2 font-bold text-blue-800 line-through">$100</span></p>
+                        <button class="p-3 mt-3 text-white bg-black">Add to cart</button>
                     </div>
-                    <div class="mx-2 border border-black pb-3 mb-2">
+                    <div class="pb-3 mx-2 mb-2 border border-black">
                         <img src="./assets/images/you2.webp" alt="">
                         <p class="mt-1">Cashmere and Bag </p>
-                        <p>$15 <span class="text-blue-800 font-bold line-through ml-2">$100</span></p>
-                        <button class="p-3 bg-black text-white mt-3">Add to cart</button>
+                        <p>$15 <span class="ml-2 font-bold text-blue-800 line-through">$100</span></p>
+                        <button class="p-3 mt-3 text-white bg-black">Add to cart</button>
                     </div>
-                    <div class="mx-2 border border-black pb-3 mb-2">
+                    <div class="pb-3 mx-2 mb-2 border border-black">
                         <img src="./assets/images/you3.webp" alt="">
                         <p class="mt-1">Cashmere and Bag</p>
-                        <p>$15 <span class="text-blue-800 font-bold line-through ml-2">$100</span></p>
-                        <button class="p-3 bg-black text-white mt-3">Add to cart</button>
+                        <p>$15 <span class="ml-2 font-bold text-blue-800 line-through">$100</span></p>
+                        <button class="p-3 mt-3 text-white bg-black">Add to cart</button>
                     </div>
-                    <div class="mx-2 border border-black pb-3 mb-2">
+                    <div class="pb-3 mx-2 mb-2 border border-black">
                         <img src="./assets/images/you4.webp" alt="">
                         <p class="mt-1">Cashmere and Bag</p>
-                        <p>$15 <span class="text-blue-800 font-bold line-through ml-2">$100</span></p>
-                        <button class="p-3 bg-black text-white mt-3">Add to cart</button>
+                        <p>$15 <span class="ml-2 font-bold text-blue-800 line-through">$100</span></p>
+                        <button class="p-3 mt-3 text-white bg-black">Add to cart</button>
+                    </div>
+                    <div class="pb-3 mx-2 mb-2 border border-black">
+                        <img src="./assets/images/you1.webp" alt="">
+                        <p class="mt-1">Cashmere and Bag</p>
+                        <p>$15 <span class="ml-2 font-bold text-blue-800 line-through">$100</span></p>
+                        <button class="p-3 mt-3 text-white bg-black">Add to cart</button>
+                    </div>
+                    <div class="pb-3 mx-2 mb-2 border border-black">
+                        <img src="./assets/images/you2.webp" alt="">
+                        <p class="mt-1">Cashmere and Bag </p>
+                        <p>$15 <span class="ml-2 font-bold text-blue-800 line-through">$100</span></p>
+                        <button class="p-3 mt-3 text-white bg-black">Add to cart</button>
+                    </div>
+                    <div class="pb-3 mx-2 mb-2 border border-black">
+                        <img src="./assets/images/you3.webp" alt="">
+                        <p class="mt-1">Cashmere and Bag</p>
+                        <p>$15 <span class="ml-2 font-bold text-blue-800 line-through">$100</span></p>
+                        <button class="p-3 mt-3 text-white bg-black">Add to cart</button>
+                    </div>
+                    <div class="pb-3 mx-2 mb-2 border border-black">
+                        <img src="./assets/images/you4.webp" alt="">
+                        <p class="mt-1">Cashmere and Bag</p>
+                        <p>$15 <span class="ml-2 font-bold text-blue-800 line-through">$100</span></p>
+                        <button class="p-3 mt-3 text-white bg-black">Add to cart</button>
                     </div>
                 </div>
             </div>
@@ -169,15 +194,15 @@
 
 
     <!-- footer section  -->
-    <footer class="bg-black text-white py-10">
-        <div class="md:flex text-center justify-around items-center border-b-2 mb-5 w-4/5 m-auto">
+    <footer class="py-10 text-white bg-black">
+        <div class="items-center justify-around w-4/5 m-auto mb-5 text-center border-b-2 md:flex">
             <div class="mb-6">
-                <h2 class="font-bold text-2xl mb-2">Subscribe News Letter</h2>
+                <h2 class="mb-2 text-2xl font-bold">Subscribe News Letter</h2>
                 <p>Subscribe newsletter to get 5% on all products.</p>
             </div>
             <div class="mb-6">
-                <input class="p-3 w-72 focus:outline-none text-black" type="email" placeholder="Enter you email...">
-                <button class="bg-red-600 p-3 mt-2  ml-1">Subscribe</button>
+                <input class="p-3 text-black w-72 focus:outline-none" type="email" placeholder="Enter you email...">
+                <button class="p-3 mt-2 ml-1 bg-red-600">Subscribe</button>
             </div>
             <div class="flex justify-center gap-5 mb-6">
                 <i class="fa-brands fa-facebook"></i>
@@ -186,11 +211,11 @@
             </div>
         </div>
 
-        <div class="md:flex md:text-left text-center md:justify-evenly mt-5">
+        <div class="mt-5 text-center md:flex md:text-left md:justify-evenly">
             <div class="mb-4">
                 <img class="m-auto" src="./assets/images/logo-footer.webp" alt="">
             </div>
-            <ul class="font-light mb-5">
+            <ul class="mb-5 font-light">
                 <li class="mb-2 font-bold">Shop Men</li>
                 <li>Clothing Fashion</li>
                 <li>Summer</li>
@@ -198,7 +223,7 @@
                 <li>Formal</li>
                 <li>Casual</li>
             </ul>
-            <ul class="font-light mb-5">
+            <ul class="mb-5 font-light">
                 <li class="mb-2 font-bold">Shop Women</li>
                 <li>Clothing Fashion</li>
                 <li>Summer</li>
@@ -206,7 +231,7 @@
                 <li>Formal</li>
                 <li>Casual</li>
             </ul>
-            <ul class="font-light mb-5">
+            <ul class="mb-5 font-light">
                 <li class="mb-2 font-bold">Shop Baby</li>
                 <li>Clothing Fashion</li>
                 <li>Summer</li>
@@ -214,7 +239,7 @@
                 <li>Formal</li>
                 <li>Casual</li>
             </ul>
-            <ul class="font-light mb-5">
+            <ul class="mb-5 font-light">
                 <li class="mb-2 font-bold">Quick Links</li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Mens.html">Men</a></li>
@@ -226,9 +251,9 @@
         </div>
 
         <div>
-            <p class="border-b-2 w-4/5 m-auto mt-5"></p>
+            <p class="w-4/5 m-auto mt-5 border-b-2"></p>
         </div>
-        <div class="my-5 text-center font-light">
+        <div class="my-5 font-light text-center">
             <p>Copyright ©2024 All rights reserved | This template is made with Heart by Colorlib</p>
         </div>
     </footer>
